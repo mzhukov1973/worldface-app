@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-//import { Navbar,Nav,NavItem } from 'react-bootstrap'
-//import { LinkContainer } from 'react-router-bootstrap'
-//import { Switch, Route, Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Navbar,Nav,NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import { Switch, Route, Link } from 'react-router-dom'
 //import MediaQuery from 'react-responsive';
 //import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
-import CmpCConn from '../containers/CmpCConn'
-//import './css/bootstrap.min.css'
-//import './css/bootstrap-theme.min.css'
+import './css/bootstrap.min.css'
+import './css/bootstrap-theme.min.css'
 //import '../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css'; //CSS is in node_module's "dist" folder.
 import './css/App.css'
+import './fonts/font-awesome.modified.css'
 
 
 //After v4.0.0, react-bootstrap-table start to support Bootstrap 4 and also compaitable with bootstrap 3. If your application use Bootstrap 4, please remember to add version='4' on BootstrapTable. This props will make some components to compaitable with bootstrap 4 style.
@@ -180,13 +180,85 @@ import './css/App.css'
 //
 
 
-class App extends Component {
 
+
+
+
+
+
+
+import UserHomeCConn               from '../containers/UserHomeCConn'
+//import UserProfilePersCConn           from '../containers/UserProfilePersCConn'
+//import UserProfileIntChatProfileCConn from '../containers/UserProfileIntChatProfileCConn'
+//import UserProfileCommsCConn          from '../containers/UserProfileCommsCConn'
+//import UserProfileDocsCConn           from '../containers/UserProfileDocsCConn'
+//import UserGalleryCConn               from '../containers/UserGalleryCConn'
+//import UserProfDiaryCConn             from '../containers/UserProfDiaryCConn'
+//import UserOwnLinksPoolCConn          from '../containers/UserOwnLinksPoolCConn'
+import CatalogueCConn                 from '../containers/CatalogueCConn'
+//import NewsReelCConn                  from '../containers/NewsReelCConn'
+import PromosCConn                    from '../containers/PromosCConn'
+//import WFBlogCConn                    from '../containers/WFBlogCConn' /*WFBlog === Worldface Blog*/
+//import OrdersCConn                    from '../containers/OrdersCConn'
+//import FavouritesCConn                from '../containers/FavouritesCConn' /*from all sections*/
+//import NotificationsCConn             from '../containers/NotificationsCConn'
+//import InternalContactsCConn          from '../containers/InternalContactsCConn' /* for now only 1-2 support, 1 manager & 1 admin tops */
+//import InternalChatCConn              from '../containers/InternalChatCConn'
+//import SupportCConn                   from '../containers/SupportCConn'
+//import CartCConn                   from '../containers/CartCConn' /*Should not lead down a route, should oprn a nice modal instead */
+
+
+class Header extends Component {
+  render() {
+/*className="navbarClass" className="headerClass" className="brandClass"*/
+    return (
+      <div className="header">
+        <Navbar inverse fixedTop>
+          <Navbar.Header>
+           <Link to="/">
+            <Navbar.Brand>
+             LOGO
+            </Navbar.Brand>
+           </Link>
+          </Navbar.Header>
+            <Nav>
+             <LinkContainer to="/promos"><NavItem eventKey={1}>PROMO</NavItem></LinkContainer>
+             <LinkContainer to="/catalogue"><NavItem eventKey={2}>CATA</NavItem></LinkContainer>
+            </Nav>
+            <Nav pullRight>
+             <LinkContainer to="/userhome" exact><NavItem eventKey={3}>USER</NavItem></LinkContainer>
+             <LinkContainer to="/"><NavItem eventKey={4}>CART</NavItem></LinkContainer>
+            </Nav>
+        </Navbar>
+      </div>
+    );
+  }
+}
+
+class Main extends Component {
   render() {
     return (
-        <div className='App'>
-          <CmpCConn />
-        </div>
+      <div className="main">
+       <Switch>
+        <Route exact path = "/"                  component = {CatalogueCConn}/>
+        <Route path       = "/userhome"          component = {UserHomeCConn}/>
+        <Route exact path = "/catalogue"         component = {CatalogueCConn}/>
+        <Route path       = "/catalogue/:number" component = {CatalogueCConn}/>
+        <Route path       = "/promos"            component = {PromosConn}/>
+
+       </Switch>
+      </div>
+    );
+  }
+}
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+       <Header/>
+       <Main/>
+      </div>
     );
   }
 }

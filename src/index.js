@@ -14,7 +14,11 @@ import './index.css'
 
 injectTapEventPlugin();
 
-const initialState = {cmpData: initialStates.cmpDataInit};
+const initialState = {
+  promosData: initialStates.promosDataInit,
+  userHomeData: initialStates.userHomeDataInit,
+  catalogueData: initialStates.catalogueDataInit
+};
 
 const sagaMiddleware = createSagaMiddleware();
 

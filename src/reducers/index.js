@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import cmpData from './cmpData'
+import userHomeData from './userHomeData'
+import catalogueData from './catalogueData'
+import promosData from './promosData'
 
 const mainReducer = combineReducers({
-  cmpData
+  catalogueData, promosData, userHomeData
 });
 
 export default mainReducer
