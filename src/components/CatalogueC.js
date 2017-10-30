@@ -1,6 +1,17 @@
 import React, { Component } from 'react'
 import PropTypes            from 'prop-types'
 
+
+class CheckBox extends React.Component {
+    render() {
+        return (
+            <svg width="24" height="24" fill="#666666" viewBox="0 0 24 24">
+                <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+            </svg>
+        );
+    }
+}
+
 class CatalogueC extends Component {
   static defaultProps = { catalogueData:{componentsText:'Placeholder', width:256, height:256, modPrefix:''} }
   static propTypes    = { catalogueData:PropTypes.shape({componentsText:PropTypes.string.isRequired, width:PropTypes.number.isRequired, height:PropTypes.number.isRequired}).isRequired, setModPrefix:PropTypes.func.isRequired, reactOnClick:PropTypes.func.isRequired }
@@ -13,7 +24,21 @@ class CatalogueC extends Component {
   }
 
   instCSSRules={}
-  reGenerateCSSRules = () => {let result=null,newRuleIdx=0,style=document.createElement('style');style.appendChild(document.createTextNode(''));document.head.appendChild(style);let stSh=style.sheet;for (let i in CatalogueC.baseCSSRules) {if (!CatalogueC.baseCSSRules.hasOwnProperty(i)) {continue;}let clSelExploded = i.split(' ');clSelExploded.forEach((currVal,idx,array)=>{clSelExploded[idx]=currVal.slice(0,1)+this.props.catalogueData.modPrefix+currVal.slice(1);});let newClSel = clSelExploded.join(' ');newRuleIdx = stSh.insertRule( (newClSel+'\n'+CatalogueC.baseCSSRules[i]), stSh.cssRules.length );result = stSh.cssRules[newRuleIdx];this.instCSSRules[i] = {'newSel':newClSel,'rule':result};}}
+  reGenerateCSSRules = () => {
+let result=null, newRuleIdx=0, style=document.createElement('style'); 
+style.appendChild(document.createTextNode(''));
+document.head.appendChild(style);
+let stSh=style.sheet;
+for (let i in CatalogueC.baseCSSRules) {
+if (!CatalogueC.baseCSSRules.hasOwnProperty(i)) {continue;}
+let clSelExploded = i.split(' ');
+clSelExploded.forEach((currVal,idx,array)=>{clSelExploded[idx]=currVal.slice(0,1)+this.props.catalogueData.modPrefix+currVal.slice(1);});
+let newClSel = clSelExploded.join(' ');
+newRuleIdx = stSh.insertRule( (newClSel+'\n'+CatalogueC.baseCSSRules[i]), stSh.cssRules.length );
+result = stSh.cssRules[newRuleIdx];
+this.instCSSRules[i] = {'newSel':newClSel,'rule':result};
+ }
+}
 
   /*Genereate and apply unique CSS rules for this component:*/
   componentWillMount = function() {this.reGenerateCSSRules();}
@@ -21,11 +46,14 @@ class CatalogueC extends Component {
 
   render() {
     return (
-      <div className={this.props.catalogueData.modPrefix+'CatalogueClassTwo'}
-           style={{width:this.props.catalogueData.width+'px',height:this.props.catalogueData.height+'px'}}>
-       <div className={this.props.catalogueData.modPrefix+'CatalogueClassOne'}
-            dangerouslySetInnerHTML={{__html:this.props.catalogueData.componentsText}}></div>
+<div>
+       <div className={this.props.catalogueData.modPrefix+'CatalogueClassOne'} dangerouslySetInnerHTML={{__html:this.props.catalogueData.componentsText}}></div>
+      <div className={this.props.catalogueData.modPrefix+'CatalogueClassTwo'} style={{width:this.props.catalogueData.width+'px',height:this.props.catalogueData.height+'px'}}>
+
+<CheckBox/>
+
       </div>
+</div>
     );
   }
 }

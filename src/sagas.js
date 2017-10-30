@@ -2,8 +2,8 @@ import { put, takeEvery, all, call } from 'redux-saga/effects'
 import { CATALOGUE_FETCH_DATA,PROMOS_FETCH_DATA,USER_HOME_FETCH_DATA } from './actions'
 
 //Base64 encode/decode UTF-8 string:
-const utoa = function(str) {return window.btoa(unescape(encodeURIComponent(str)));}
-const atou = function(str) {return decodeURIComponent(escape(window.atob(str)));}
+//const utoa = function(str) {return window.btoa(unescape(encodeURIComponent(str)));}
+//const atou = function(str) {return decodeURIComponent(escape(window.atob(str)));}
 
 const DoJSONLoad = (method = 'normal', action = 'get_nonexistant', record = -1) => {
   let myHeaders = new Headers({"Content-type":"application/x-www-form-urlencoded"});

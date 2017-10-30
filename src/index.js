@@ -10,6 +10,7 @@ import mainReducer                               from './reducers'
 import App                                       from './components/App'
 import * as initialStates                        from './modules/initialStates'
 import registerServiceWorker                     from './registerServiceWorker'
+import 'semantic-ui-css/semantic.min.css'
 import './index.css'
 
 injectTapEventPlugin();
@@ -28,7 +29,7 @@ sagaMiddleware.run(rootSaga);
 
 const startIt = () => {
   render(
-    <BrowserRouter basename="/worldface-app">
+    <BrowserRouter>
       <Provider store={store}>
         <App/>
       </Provider>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Navbar,Nav,NavItem } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+//import { Navbar,Nav,NavItem } from 'react-bootstrap';
+//import { LinkContainer } from 'react-router-bootstrap';
 import { Switch, Route, Link } from 'react-router-dom'
 //import MediaQuery from 'react-responsive';
 //import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
@@ -187,7 +187,7 @@ import './fonts/font-awesome.modified.css'
 
 
 
-import UserHomeCConn               from '../containers/UserHomeCConn'
+//import UserHomeCConn               from '../containers/UserHomeCConn'
 //import UserProfilePersCConn           from '../containers/UserProfilePersCConn'
 //import UserProfileIntChatProfileCConn from '../containers/UserProfileIntChatProfileCConn'
 //import UserProfileCommsCConn          from '../containers/UserProfileCommsCConn'
@@ -196,8 +196,11 @@ import UserHomeCConn               from '../containers/UserHomeCConn'
 //import UserProfDiaryCConn             from '../containers/UserProfDiaryCConn'
 //import UserOwnLinksPoolCConn          from '../containers/UserOwnLinksPoolCConn'
 import CatalogueCConn                 from '../containers/CatalogueCConn'
+import CatItemCConn                 from '../containers/CatItemCConn'
+//import CatGroupCConn                 from '../containers/CatGroupCConn'
+//import MiniCatItemC                   from './MiniCatItemC'
 //import NewsReelCConn                  from '../containers/NewsReelCConn'
-import PromosCConn                    from '../containers/PromosCConn'
+//import PromosCConn                    from '../containers/PromosCConn'
 //import WFBlogCConn                    from '../containers/WFBlogCConn' /*WFBlog === Worldface Blog*/
 //import OrdersCConn                    from '../containers/OrdersCConn'
 //import FavouritesCConn                from '../containers/FavouritesCConn' /*from all sections*/
@@ -210,26 +213,9 @@ import PromosCConn                    from '../containers/PromosCConn'
 
 class Header extends Component {
   render() {
-/*className="navbarClass" className="headerClass" className="brandClass"*/
     return (
-      <div className="header">
-        <Navbar inverse fixedTop>
-          <Navbar.Header>
-           <Link to="/">
-            <Navbar.Brand>
-             LOGO
-            </Navbar.Brand>
-           </Link>
-          </Navbar.Header>
-            <Nav>
-             <LinkContainer to="/promos"><NavItem eventKey={1}>PROMO</NavItem></LinkContainer>
-             <LinkContainer to="/catalogue"><NavItem eventKey={2}>CATA</NavItem></LinkContainer>
-            </Nav>
-            <Nav pullRight>
-             <LinkContainer to="/userhome" exact><NavItem eventKey={3}>USER</NavItem></LinkContainer>
-             <LinkContainer to="/"><NavItem eventKey={4}>CART</NavItem></LinkContainer>
-            </Nav>
-        </Navbar>
+      <div>
+           <Link to="/">LOGO</Link>
       </div>
     );
   }
@@ -241,11 +227,10 @@ class Main extends Component {
       <div className="main">
        <Switch>
         <Route exact path = "/"                  component = {CatalogueCConn}/>
-        <Route path       = "/userhome"          component = {UserHomeCConn}/>
+{/*        <Route path       = "/userhome"          component = {UserHomeCConn}/> */}
         <Route exact path = "/catalogue"         component = {CatalogueCConn}/>
         <Route path       = "/catalogue/:number" component = {CatalogueCConn}/>
-        <Route path       = "/promos"            component = {PromosConn}/>
-
+{/*        <Route path       = "/promos"            component = {PromosCConn}/>   */}
        </Switch>
       </div>
     );
@@ -256,8 +241,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       <Header/>
-       <Main/>
+{/*       <Header/> activate when we are going to nee routing*/}
+{/*       <Main/>   */}
+
+
+      <CatItemCConn />
+
       </div>
     );
   }

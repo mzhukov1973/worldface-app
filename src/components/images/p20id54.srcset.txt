@@ -1,0 +1,1 @@
+images/p20id54-w1120.jpg 1120w, images/p20id54-w1280.jpg 1280w, images/p20id54-w1440.jpg 1440w, images/p20id54-w1600.jpg 1600w, images/p20id54-w160.jpg 160w, images/p20id54-w320.jpg 320w, images/p20id54-w480.jpg 480w, images/p20id54-w640.jpg 640w, images/p20id54-w800.jpg 800w, images/p20id54-w960.jpg 960w
