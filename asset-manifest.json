@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.1a16c808.css",
   "main.css.map": "static/css/main.1a16c808.css.map",
-  "main.js": "static/js/main.4ce1c484.js",
-  "main.js.map": "static/js/main.4ce1c484.js.map",
+  "main.js": "static/js/main.50927d48.js",
+  "main.js.map": "static/js/main.50927d48.js.map",
   "static/media/flags.png": "static/media/flags.9c74e172.png",
   "static/media/fontawesome-webfont.eot": "static/media/fontawesome-webfont.674f50d2.eot",
   "static/media/fontawesome-webfont.svg?v=4.7.0": "static/media/fontawesome-webfont.912ec66d.svg",
@@ -18,6 +18,5 @@
   "static/media/icons.svg": "static/media/icons.912ec66d.svg",
   "static/media/icons.ttf": "static/media/icons.b06871f2.ttf",
   "static/media/icons.woff": "static/media/icons.fee66e71.woff",
-  "static/media/icons.woff2": "static/media/icons.af7ae505.woff2",
-  "static/media/logoHead.svg": "static/media/logoHead.48ba3612.svg"
+  "static/media/icons.woff2": "static/media/icons.af7ae505.woff2"
 }
