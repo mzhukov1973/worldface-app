@@ -27,6 +27,12 @@ const promosData = (state = {}, action) => {
      return state;
 
     default:
+/*
+     console.log('%c\n-----------------------------------\n'+'%cpromosData'+'%c reducer, '+'%cDEFAULT'+'%c action:','color:DarkCyan;','font-weight:bold;color:Cyan;','color:DarkCyan;','font-weight:bold;color:Cyan;','color:DarkCyan;');
+     console.log('%cstate(promosData) is:');console.log(state);
+     console.log('%cand the action was:','color:DarkCyan;');console.log(action);
+     console.log('%c\n-----------------------------------\n','color:DarkCyan;');
+*/
      return state;
   }
 }

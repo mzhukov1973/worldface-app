@@ -1,14 +1,10 @@
-import { CATALOGUE_FETCH_DATA, CATALOGUE_ACT_TWO, CATALOGUE_SET_MODPREFIX, CATALOGUE_INC_SIZE } from '../actions'
+import { CATALOGUE_FETCH_DATA, CATALOGUE_ACT_TWO, CATALOGUE_SET_MODPREFIX } from '../actions'
 
 const catalogueData = (state = {}, action) => {
   switch(action.type)
   {
     case CATALOGUE_SET_MODPREFIX:
      return Object.assign({},state,{modPrefix:action.data});
-
-    case CATALOGUE_INC_SIZE:
-     return Object.assign({},state,{width:(state.width+1),height:(state.height+1)});
-
 
 /*=======Below is a saga-bound action (3 in fact)====*/
     case CATALOGUE_FETCH_DATA.REQ:
@@ -27,6 +23,12 @@ const catalogueData = (state = {}, action) => {
      return state;
 
     default:
+/*
+     console.log('%c\n-----------------------------------\n'+'%ccatalogueData'+'%c reducer, '+'%cDEFAULT'+'%c action:','color:DarkCyan;','font-weight:bold;color:Cyan;','color:DarkCyan;','font-weight:bold;color:Cyan;','color:DarkCyan;');
+     console.log('%cstate(catalogueData) is:','color:DarkCyan;');console.log(state);
+     console.log('%cand the action was:','color:DarkCyan;');console.log(action);
+     console.log('%c\n-----------------------------------\n','color:DarkCyan;');
+*/
      return state;
   }
 }

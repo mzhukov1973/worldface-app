@@ -1,0 +1,128 @@
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-brand7 {
+  width: 0.875em;
+}
+
+.icon-genius {
+  width: 0.9375em;
+}
+
+.icon-wrench {
+  width: 0.9391428571428571em;
+}
+
+.icon-chain {
+  width: 0.9285714285714285em;
+}
+
+.icon-keyboard-o {
+  width: 1.0714285714285714em;
+}
+
+.icon-terminal {
+  width: 0.934142857142857em;
+}
+
+.icon-code2 {
+  width: 1.0714285714285714em;
+}
+
+.icon-shield {
+  width: 0.7142857142857142em;
+}
+
+.icon-html5 {
+  width: 0.7857142857142857em;
+}
+
+.icon-apple {
+  width: 0.7773571428571427em;
+}
+
+.icon-android3 {
+  width: 0.7857142857142857em;
+}
+
+.icon-linux {
+  width: 0.8939999999999999em;
+}
+
+.icon-bug {
+  width: 0.9285714285714285em;
+}
+
+.icon-recycle {
+  width: 1.0022142857142857em;
+}
+
+.icon-git-square {
+  width: 0.8571428571428571em;
+}
+
+.icon-chrome {
+  width: 1.054142857142857em;
+}
+
+.icon-firefox {
+  width: 0.9537142857142857em;
+}
+
+.icon-usb {
+  width: 1.2857142857142856em;
+}
+
+.icon-bluetooth2 {
+  width: 0.8571428571428571em;
+}
+
+.icon-bluetooth-b {
+  width: 0.5714285714285714em;
+}
+
+.icon-microchip {
+  width: 0.8571428571428571em;
+}
+
+.icon-bug2 {
+  width: 0.7158203125em;
+}
+
+.icon-circle-slash {
+  width: 0.625em;
+}
+
+.icon-code3 {
+  width: 0.875em;
+}
+
+.icon-file-binary {
+  width: 0.75em;
+}
+
+.icon-file-code {
+  width: 0.75em;
+}
+
+.icon-file-directory {
+  width: 0.875em;
+}
+
+.icon-terminal2 {
+  width: 0.875em;
+}

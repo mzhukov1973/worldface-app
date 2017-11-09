@@ -1,0 +1,188 @@
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-comments {
+  width: 1.07421875em;
+}
+
+.icon-calendar4 {
+  width: 1.0625em;
+}
+
+.icon-caution {
+  width: 1.09375em;
+}
+
+.icon-chat2 {
+  width: 1.3125em;
+}
+
+.icon-heart3 {
+  width: 1.15625em;
+}
+
+.icon-film {
+  width: 1.0714285714285714em;
+}
+
+.icon-close2 {
+  width: 0.7857142857142857em;
+}
+
+.icon-trash-o {
+  width: 0.7857142857142857em;
+}
+
+.icon-home3 {
+  width: 0.9285714285714285em;
+}
+
+.icon-qrcode {
+  width: 0.7857142857142857em;
+}
+
+.icon-arrow-left3 {
+  width: 0.8928571428571428em;
+}
+
+.icon-arrow-right3 {
+  width: 0.8214285714285714em;
+}
+
+.icon-arrow-up3 {
+  width: 0.9285714285714285em;
+}
+
+.icon-arrow-down3 {
+  width: 0.9285714285714285em;
+}
+
+.icon-retweet {
+  width: 1.0714285714285714em;
+}
+
+.icon-shopping-cart {
+  width: 0.9285714285714285em;
+}
+
+.icon-folder {
+  width: 0.9285714285714285em;
+}
+
+.icon-folder-open {
+  width: 1.0485714285714285em;
+}
+
+.icon-arrows-v {
+  width: 0.42857142857142855em;
+}
+
+.icon-bars {
+  width: 0.8571428571428571em;
+}
+
+.icon-truck3 {
+  width: 1.0357142857142856em;
+}
+
+.icon-angle-double-left {
+  width: 0.5892857142857143em;
+}
+
+.icon-angle-double-right {
+  width: 0.5535714285714285em;
+}
+
+.icon-angle-double-up {
+  width: 0.6428571428571428em;
+}
+
+.icon-angle-double-down {
+  width: 0.6428571428571428em;
+}
+
+.icon-folder-open-o {
+  width: 1.0652857142857142em;
+}
+
+.icon-gittip {
+  width: 0.8571428571428571em;
+}
+
+.icon-database2 {
+  width: 0.8571428571428571em;
+}
+
+.icon-newspaper-o {
+  width: 1.1428571428571428em;
+}
+
+.icon-bell-slash {
+  width: 1.1428571428571428em;
+}
+
+.icon-bell-slash-o {
+  width: 1.1428571428571428em;
+}
+
+.icon-at2 {
+  width: 0.8571428571428571em;
+}
+
+.icon-toggle-off {
+  width: 1.1428571428571428em;
+}
+
+.icon-toggle-on {
+  width: 1.1428571428571428em;
+}
+
+.icon-handshake-o {
+  width: 1.2857142857142856em;
+}
+
+.icon-check3 {
+  width: 0.75em;
+}
+
+.icon-checklist {
+  width: 0.7470703125em;
+}
+
+.icon-heart7 {
+  width: 0.75em;
+}
+
+.icon-location2 {
+  width: 0.625em;
+}
+
+.icon-mention {
+  width: 0.8125em;
+}
+
+.icon-pulse {
+  width: 0.875em;
+}
+
+.icon-steps {
+  width: 0.625em;
+}
+
+.icon-zap {
+  width: 0.625em;
+}

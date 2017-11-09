@@ -1,5 +1,5 @@
 import { connect }           from 'react-redux'
-import { CATALOGUE_SET_MODPREFIX, CATALOGUE_INC_SIZE } from '../actions'
+import { CATALOGUE_SET_MODPREFIX } from '../actions'
 import CatalogueC                  from '../components/CatalogueC'
 
 const mapStateToProps = ( state ) => {
@@ -8,8 +8,7 @@ const mapStateToProps = ( state ) => {
 
 const mapDispatchToProps = (dispatch,ownProps) => {
   return {
-    setModPrefix:  (modPrefix) => {dispatch({type:CATALOGUE_SET_MODPREFIX,data:modPrefix});},
-    reactOnClick:  ()          => {dispatch({type:CATALOGUE_INC_SIZE});}
+    setModPrefix:  (modPrefix) => {dispatch({type:CATALOGUE_SET_MODPREFIX,data:modPrefix});}
   }
 }
 

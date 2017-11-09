@@ -1,0 +1,44 @@
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-calendar4 {
+  width: 1.0625em;
+}
+
+.icon-hourglass {
+  width: 0.65625em;
+}
+
+.icon-alarmclock2 {
+  width: 0.9375em;
+}
+
+.icon-clock-o {
+  width: 0.8571428571428571em;
+}
+
+.icon-calendar7 {
+  width: 0.9285714285714285em;
+}
+
+.icon-calendar-o {
+  width: 0.9285714285714285em;
+}
+
+.icon-clock3 {
+  width: 0.875em;
+}

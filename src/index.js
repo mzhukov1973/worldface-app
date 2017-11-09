@@ -1,6 +1,5 @@
 import React                                     from 'react'
 import { render }                                from 'react-dom'
-import { BrowserRouter }                         from 'react-router-dom'
 import injectTapEventPlugin                      from 'react-tap-event-plugin'
 import { Provider }                              from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
@@ -16,24 +15,25 @@ import './index.css'
 injectTapEventPlugin();
 
 const initialState = {
-  promosData: initialStates.promosDataInit,
-  userHomeData: initialStates.userHomeDataInit,
-  catalogueData: initialStates.catalogueDataInit
+  promosData:    initialStates.promosDataInit,
+  userHomeData:  initialStates.userHomeDataInit,
+  newsFeedData:  initialStates.newsFeedDataInit,
+  catalogueData: initialStates.catalogueDataInit,
+  catGroupDatas: initialStates.catGroupDatasInit,
+  catItemDatas:  initialStates.catItemDatasInit
 };
 
 const sagaMiddleware = createSagaMiddleware();
 
-let store = createStore(mainReducer, initialState, compose(applyMiddleware(sagaMiddleware)));
+let store = createStore(mainReducer, initialState, compose(applyMiddleware(sagaMiddleware), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
 
 sagaMiddleware.run(rootSaga);
 
 const startIt = () => {
   render(
-    <BrowserRouter>
       <Provider store={store}>
         <App/>
-      </Provider>
-    </BrowserRouter>,
+      </Provider>,
    document.getElementById('root')
   );
   registerServiceWorker();
